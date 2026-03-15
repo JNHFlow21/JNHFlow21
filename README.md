@@ -51,6 +51,21 @@ My work sits at the intersection of AI product development, agentic tooling, and
 
 ---
 
+## Recent Projects
+
+<!-- recent-projects:start -->
+- [harness-first-agentic-development](https://github.com/JNHFlow21/harness-first-agentic-development)  
+  AI-first framework and template repo for agentic engineering, AI coding workflows, and human-in-the-loop product development.
+- [offerpilot-ai](https://github.com/JNHFlow21/offerpilot-ai)  
+  AI interview preparation copilot for AI and product role seekers.
+- [openclaw-live-panel](https://github.com/JNHFlow21/openclaw-live-panel)  
+  Realtime terminal dashboard for OpenClaw multi-agent monitoring (RUNNING/IDLE/STUCK/RATE_LIMIT) with queue diagnostics and token visibility.
+- [ocl-social-fetcher](https://github.com/JNHFlow21/ocl-social-fetcher)  
+  OpenClaw Skill: Social media fetcher for Twitter/X, Xiaohongshu, Douyin
+<!-- recent-projects:end -->
+
+---
+
 ## GitHub Pulse
 
 <p align="center">
