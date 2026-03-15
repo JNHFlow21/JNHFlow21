@@ -56,14 +56,14 @@ My work sits at the intersection of AI product development, agentic tooling, and
 <p align="center">
   <picture>
     <source
-      srcset="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&include_all_commits=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA"
+      srcset="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA"
       media="(prefers-color-scheme: dark)"
     />
     <source
-      srcset="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&include_all_commits=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB"
+      srcset="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB"
       media="(prefers-color-scheme: light)"
     />
-    <img height="170" src="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&include_all_commits=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
+    <img height="170" src="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
   </picture>
 </p>
 
