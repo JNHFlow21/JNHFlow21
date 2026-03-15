@@ -56,24 +56,20 @@ My work sits at the intersection of AI product development, agentic tooling, and
 <!-- recent-projects:start -->
 <table>
   <tr>
-    <td width="48%" valign="top" align="center">
+    <td width="48%" valign="top">
       <a href="https://github.com/JNHFlow21/harness-first-agentic-development">
-        <picture>
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=FCE7F3&text_color=F9A8D4&icon_color=F472B6" media="(prefers-color-scheme: dark)" />
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=5B2145&text_color=7A284D&icon_color=DB2777" media="(prefers-color-scheme: light)" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=5B2145&text_color=7A284D&icon_color=DB2777" />
-        </picture>
+        <img src="https://img.shields.io/badge/Recent-Harness--First_Agentic_Development-DB2777?style=for-the-badge" />
       </a>
+      <br/>
+      AI-first framework and template repo for agentic engineering, AI coding workflows, and human-in-the-loop product development.
     </td>
     <td width="4%"></td>
-    <td width="48%" valign="top" align="center">
+    <td width="48%" valign="top">
       <a href="https://github.com/JNHFlow21/offerpilot-ai">
-        <picture>
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=FCE7F3&text_color=F9A8D4&icon_color=F472B6" media="(prefers-color-scheme: dark)" />
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=5B2145&text_color=7A284D&icon_color=DB2777" media="(prefers-color-scheme: light)" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=5B2145&text_color=7A284D&icon_color=DB2777" />
-        </picture>
+        <img src="https://img.shields.io/badge/Recent-OfferPilot_AI-EC4899?style=for-the-badge" />
       </a>
+      <br/>
+      AI interview preparation copilot for AI and product role seekers.
     </td>
   </tr>
 </table>
