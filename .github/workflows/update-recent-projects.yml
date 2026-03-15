@@ -35,59 +35,16 @@ jobs:
               .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
               .slice(0, 2);
 
-            const escapeHtml = (value) =>
-              (value || '')
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;');
-
-            const tagsFor = (item) => {
-              const text = `${item.name} ${item.description || ''}`.toLowerCase();
-              const tags = [];
-
-              if (text.includes('ai') || text.includes('agent') || text.includes('copilot')) {
-                tags.push(['AI Product', '0F172A']);
-              }
-
-              if (
-                text.includes('tool') ||
-                text.includes('framework') ||
-                text.includes('dashboard') ||
-                text.includes('skill')
-              ) {
-                tags.push(['Tooling', '1D4ED8']);
-              }
-
-              if (
-                text.includes('automation') ||
-                text.includes('workflow') ||
-                text.includes('bot')
-              ) {
-                tags.push(['Automation', '334155']);
-              }
-
-              if (tags.length === 0) {
-                tags.push(['Builder', '475569']);
-              }
-
-              return tags.slice(0, 2);
-            };
-
             const cells = recent.map((item) => {
-              const description = escapeHtml(item.description?.trim() || 'No description yet.');
-              const badges = tagsFor(item)
-                .map(
-                  ([label, color]) =>
-                    `<img src="https://img.shields.io/badge/${encodeURIComponent(label.replace(/ /g, '_'))}-${color}?style=flat-square" />`
-                )
-                .join('\n      ');
-
               return [
                 '    <td width="50%" valign="top">',
-                `      <strong><a href="${item.html_url}">${escapeHtml(item.name)}</a></strong><br/>`,
-                `      ${badges}<br/>`,
-                `      ${description}`,
+                `      <a href="${item.html_url}">`,
+                '        <picture>',
+                `          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=${owner}&repo=${item.name}&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />`,
+                `          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=${owner}&repo=${item.name}&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" media="(prefers-color-scheme: light)" />`,
+                `          <img src="https://github-readme-stats.vercel.app/api/pin/?username=${owner}&repo=${item.name}&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />`,
+                '        </picture>',
+                '      </a>',
                 '    </td>',
               ].join('\n');
             });

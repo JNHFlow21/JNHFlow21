@@ -57,15 +57,34 @@ My work sits at the intersection of AI product development, agentic tooling, and
 <table>
   <tr>
     <td width="50%" valign="top">
-      <strong><a href="https://github.com/JNHFlow21/harness-first-agentic-development">harness-first-agentic-development</a></strong><br/>
-      <img src="https://img.shields.io/badge/AI_Product-0F172A?style=flat-square" />
-      <img src="https://img.shields.io/badge/Tooling-1D4ED8?style=flat-square" /><br/>
-      AI-first framework and template repo for agentic engineering, AI coding workflows, and human-in-the-loop product development.
+      <a href="https://github.com/JNHFlow21/harness-first-agentic-development">
+        <picture>
+          <source
+            srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA"
+            media="(prefers-color-scheme: dark)"
+          />
+          <source
+            srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB"
+            media="(prefers-color-scheme: light)"
+          />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
+        </picture>
+      </a>
     </td>
     <td width="50%" valign="top">
-      <strong><a href="https://github.com/JNHFlow21/offerpilot-ai">offerpilot-ai</a></strong><br/>
-      <img src="https://img.shields.io/badge/AI_Product-0F172A?style=flat-square" /><br/>
-      AI interview preparation copilot for AI and product role seekers.
+      <a href="https://github.com/JNHFlow21/offerpilot-ai">
+        <picture>
+          <source
+            srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA"
+            media="(prefers-color-scheme: dark)"
+          />
+          <source
+            srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB"
+            media="(prefers-color-scheme: light)"
+          />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
+        </picture>
+      </a>
     </td>
   </tr>
 </table>
