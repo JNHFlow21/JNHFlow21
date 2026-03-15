@@ -64,8 +64,7 @@ My work sits at the intersection of AI product development, agentic tooling, and
     </td>
     <td width="50%" valign="top">
       <strong><a href="https://github.com/JNHFlow21/offerpilot-ai">offerpilot-ai</a></strong><br/>
-      <img src="https://img.shields.io/badge/AI_Product-0F172A?style=flat-square" />
-      <img src="https://img.shields.io/badge/Automation-334155?style=flat-square" /><br/>
+      <img src="https://img.shields.io/badge/AI_Product-0F172A?style=flat-square" /><br/>
       AI interview preparation copilot for AI and product role seekers.
     </td>
   </tr>
