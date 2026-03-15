@@ -83,22 +83,26 @@ jobs:
                 )
                 .join('\n      ');
 
-              return `    <td width="50%" valign="top">
-      <strong><a href="${item.html_url}">${escapeHtml(item.name)}</a></strong><br/>
-      ${badges}<br/>
-      ${description}
-    </td>`;
+              return [
+                '    <td width="50%" valign="top">',
+                `      <strong><a href="${item.html_url}">${escapeHtml(item.name)}</a></strong><br/>`,
+                `      ${badges}<br/>`,
+                `      ${description}`,
+                '    </td>',
+              ].join('\n');
             });
 
             while (cells.length < 2) {
               cells.push('    <td width="50%" valign="top"></td>');
             }
 
-            const block = `<table>
-  <tr>
-${cells.join('\n')}
-  </tr>
-</table>`;
+            const block = [
+              '<table>',
+              '  <tr>',
+              cells.join('\n'),
+              '  </tr>',
+              '</table>',
+            ].join('\n');
             const start = '<!-- recent-projects:start -->';
             const end = '<!-- recent-projects:end -->';
 
