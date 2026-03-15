@@ -37,7 +37,7 @@ jobs:
 
             const cells = recent.map((item) => {
               return [
-                '    <td width="50%" valign="top">',
+                '    <td width="48%" valign="top" align="center">',
                 `      <a href="${item.html_url}">`,
                 '        <picture>',
                 `          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=${owner}&repo=${item.name}&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />`,
@@ -50,13 +50,13 @@ jobs:
             });
 
             while (cells.length < 2) {
-              cells.push('    <td width="50%" valign="top"></td>');
+              cells.push('    <td width="48%" valign="top"></td>');
             }
 
             const block = [
               '<table>',
               '  <tr>',
-              cells.join('\n'),
+              [cells[0], '    <td width="4%"></td>', cells[1]].join('\n'),
               '  </tr>',
               '</table>',
             ].join('\n');

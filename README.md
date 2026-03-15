@@ -56,7 +56,7 @@ My work sits at the intersection of AI product development, agentic tooling, and
 <!-- recent-projects:start -->
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td width="48%" valign="top" align="center">
       <a href="https://github.com/JNHFlow21/harness-first-agentic-development">
         <picture>
           <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />
@@ -65,7 +65,8 @@ My work sits at the intersection of AI product development, agentic tooling, and
         </picture>
       </a>
     </td>
-    <td width="50%" valign="top">
+    <td width="4%"></td>
+    <td width="48%" valign="top" align="center">
       <a href="https://github.com/JNHFlow21/offerpilot-ai">
         <picture>
           <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />
