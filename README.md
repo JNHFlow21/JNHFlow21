@@ -61,12 +61,6 @@ My work sits at the intersection of AI product development, agentic tooling, and
     <img src="./assets/recent-projects-light.svg" alt="Recent projects" />
   </picture>
 </p>
-
-<p align="center">
-  <a href="https://github.com/JNHFlow21/harness-first-agentic-development"><strong>harness-first-agentic-development</strong></a>
-  &nbsp;•&nbsp;
-  <a href="https://github.com/JNHFlow21/offerpilot-ai"><strong>offerpilot-ai</strong></a>
-</p>
 <!-- recent-projects:end -->
 
 ---

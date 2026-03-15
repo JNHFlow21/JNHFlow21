@@ -120,12 +120,12 @@ jobs:
             const renderSvg = (theme) => {
               const c = palette[theme];
               const width = 960;
-              const height = 284;
+              const height = 232;
               const cardWidth = 442;
-              const cardHeight = 212;
+              const cardHeight = 196;
               const gap = 28;
               const startX = 24;
-              const startY = 24;
+              const startY = 18;
 
               const cards = recent.map((item, index) => {
                 const x = startX + index * (cardWidth + gap);
@@ -148,30 +148,29 @@ jobs:
           `<text x="56" y="${40 + i * 26}" fill="${c.title}" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">${escapeXml(line)}</text>`
       )
       .join('\n    ')}
-    <rect x="28" y="70" rx="999" ry="999" width="${chipWidth}" height="28" fill="${c.chipBg}" stroke="${c.border}" />
-    <text x="${28 + chipWidth / 2}" y="89" text-anchor="middle" fill="${c.accent}" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">${escapeXml(lang)}</text>
+    <rect x="28" y="68" rx="999" ry="999" width="${chipWidth}" height="28" fill="${c.chipBg}" stroke="${c.border}" />
+    <text x="${28 + chipWidth / 2}" y="87" text-anchor="middle" fill="${c.accent}" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">${escapeXml(lang)}</text>
     ${descLines
       .map(
         (line, i) =>
-          `<text x="28" y="${126 + i * 28}" fill="${c.text}" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500">${escapeXml(line)}</text>`
+          `<text x="28" y="${122 + i * 28}" fill="${c.text}" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500">${escapeXml(line)}</text>`
       )
       .join('\n    ')}
-    <line x1="28" y1="176" x2="${cardWidth - 28}" y2="176" stroke="${c.border}" />
-    <text x="28" y="200" fill="${c.muted}" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Recently updated</text>
-    <text x="${cardWidth - 28}" y="200" text-anchor="end" fill="${c.muted}" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">${updated}</text>
+    <line x1="28" y1="162" x2="${cardWidth - 28}" y2="162" stroke="${c.border}" />
+    <text x="28" y="184" fill="${c.muted}" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Recently updated</text>
+    <text x="${cardWidth - 28}" y="184" text-anchor="end" fill="${c.muted}" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">${updated}</text>
   </g>`;
               }).join('\n');
 
               return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="${width}" height="${height}" rx="28" fill="${c.canvas}" />
   <defs>
     <linearGradient id="beam-${theme}" x1="0" y1="0" x2="${width}" y2="${height}" gradientUnits="userSpaceOnUse">
       <stop stop-color="${c.accent}" stop-opacity="0.18" />
       <stop offset="1" stop-color="${c.accent}" stop-opacity="0" />
     </linearGradient>
   </defs>
-  <rect x="18" y="18" width="${width - 36}" height="${height - 36}" rx="24" fill="url(#beam-${theme})" />
+  <rect x="0" y="0" width="${width}" height="${height}" rx="28" fill="url(#beam-${theme})" opacity="0.42" />
 ${cards}
 </svg>`;
             };
@@ -180,10 +179,6 @@ ${cards}
             fs.writeFileSync('assets/recent-projects-dark.svg', renderSvg('dark'));
             fs.writeFileSync('assets/recent-projects-light.svg', renderSvg('light'));
 
-            const links = recent
-              .map((item) => `<a href="${item.html_url}"><strong>${item.name}</strong></a>`)
-              .join('\n  &nbsp;•&nbsp;\n  ');
-
             const block = [
               '<p align="center">',
               '  <picture>',
@@ -191,10 +186,6 @@ ${cards}
               '    <source srcset="./assets/recent-projects-light.svg" media="(prefers-color-scheme: light)" />',
               '    <img src="./assets/recent-projects-light.svg" alt="Recent projects" />',
               '  </picture>',
-              '</p>',
-              '',
-              '<p align="center">',
-              `  ${links}`,
               '</p>',
             ].join('\n');
 
