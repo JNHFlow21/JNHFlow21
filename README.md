@@ -54,29 +54,19 @@ My work sits at the intersection of AI product development, agentic tooling, and
 ## Recent Projects
 
 <!-- recent-projects:start -->
-<table>
-  <tr>
-    <td width="48%" valign="top" align="center">
-      <a href="https://github.com/JNHFlow21/harness-first-agentic-development">
-        <picture>
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" media="(prefers-color-scheme: light)" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=harness-first-agentic-development&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
-        </picture>
-      </a>
-    </td>
-    <td width="4%"></td>
-    <td width="48%" valign="top" align="center">
-      <a href="https://github.com/JNHFlow21/offerpilot-ai">
-        <picture>
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" media="(prefers-color-scheme: light)" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=offerpilot-ai&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
-        </picture>
-      </a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <picture>
+    <source srcset="./assets/recent-projects-dark.svg" media="(prefers-color-scheme: dark)" />
+    <source srcset="./assets/recent-projects-light.svg" media="(prefers-color-scheme: light)" />
+    <img src="./assets/recent-projects-light.svg" alt="Recent projects" />
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://github.com/JNHFlow21/harness-first-agentic-development"><strong>harness-first-agentic-development</strong></a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/JNHFlow21/offerpilot-ai"><strong>offerpilot-ai</strong></a>
+</p>
 <!-- recent-projects:end -->
 
 ---

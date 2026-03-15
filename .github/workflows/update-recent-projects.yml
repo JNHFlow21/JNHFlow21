@@ -35,33 +35,168 @@ jobs:
               .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
               .slice(0, 2);
 
-            const cells = recent.map((item) => {
-              return [
-                '    <td width="48%" valign="top" align="center">',
-                `      <a href="${item.html_url}">`,
-                '        <picture>',
-                `          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=${owner}&repo=${item.name}&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />`,
-                `          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=${owner}&repo=${item.name}&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" media="(prefers-color-scheme: light)" />`,
-                `          <img src="https://github-readme-stats.vercel.app/api/pin/?username=${owner}&repo=${item.name}&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />`,
-                '        </picture>',
-                '      </a>',
-                '    </td>',
-              ].join('\n');
-            });
-
-            while (cells.length < 2) {
-              cells.push('    <td width="48%" valign="top"></td>');
-            }
-
-            const block = [
-              '<table>',
-              '  <tr>',
-              [cells[0], '    <td width="4%"></td>', cells[1]].join('\n'),
-              '  </tr>',
-              '</table>',
-            ].join('\n');
             const start = '<!-- recent-projects:start -->';
             const end = '<!-- recent-projects:end -->';
+
+            const escapeXml = (value = '') =>
+              value
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&apos;');
+
+            const truncate = (value = '', max = 88) => {
+              if (value.length <= max) return value;
+              return `${value.slice(0, max - 1).trimEnd()}…`;
+            };
+
+            const wrapText = (value = '', maxChars = 30) => {
+              const words = value.split(/\s+/).filter(Boolean);
+              const lines = [];
+              let current = '';
+
+              for (const word of words) {
+                const next = current ? `${current} ${word}` : word;
+                if (next.length <= maxChars) {
+                  current = next;
+                } else {
+                  if (current) lines.push(current);
+                  current = word;
+                }
+              }
+
+              if (current) lines.push(current);
+              return lines.slice(0, 2);
+            };
+
+            const wrapTitle = (value = '', maxChars = 24) => {
+              const chunks = value.split('-');
+              const lines = [];
+              let current = '';
+
+              for (const chunk of chunks) {
+                const next = current ? `${current}-${chunk}` : chunk;
+                if (next.length <= maxChars) {
+                  current = next;
+                } else {
+                  if (current) lines.push(current);
+                  current = chunk;
+                }
+              }
+
+              if (current) lines.push(current);
+
+              if (lines.length <= 2) return lines;
+              const merged = [lines[0], truncate(lines.slice(1).join('-'), maxChars)];
+              return merged;
+            };
+
+            const palette = {
+              dark: {
+                canvas: '#0d1117',
+                frame: '#111827',
+                border: '#263244',
+                title: '#f8fafc',
+                text: '#cbd5e1',
+                muted: '#7c8aa5',
+                accent: '#60a5fa',
+                accentSoft: '#1d4ed8',
+                chipBg: '#0f172a',
+              },
+              light: {
+                canvas: '#ffffff',
+                frame: '#f8fafc',
+                border: '#d7e0ea',
+                title: '#0f172a',
+                text: '#334155',
+                muted: '#64748b',
+                accent: '#2563eb',
+                accentSoft: '#dbeafe',
+                chipBg: '#eff6ff',
+              },
+            };
+
+            const renderSvg = (theme) => {
+              const c = palette[theme];
+              const width = 960;
+              const height = 284;
+              const cardWidth = 442;
+              const cardHeight = 212;
+              const gap = 28;
+              const startX = 24;
+              const startY = 24;
+
+              const cards = recent.map((item, index) => {
+                const x = startX + index * (cardWidth + gap);
+                const y = startY;
+                const titleLines = wrapTitle(item.name, 24);
+                const desc = truncate(item.description || 'No description yet.', 92);
+                const descLines = wrapText(desc, 34);
+                const updated = new Date(item.updated_at).toISOString().slice(0, 10);
+                const lang = item.language || 'Code';
+                const chipWidth = Math.min(Math.max(lang.length * 8 + 28, 84), 132);
+
+                return `
+  <g transform="translate(${x} ${y})">
+    <rect x="0" y="0" rx="24" ry="24" width="${cardWidth}" height="${cardHeight}" fill="${c.frame}" stroke="${c.border}" />
+    <circle cx="34" cy="34" r="10" fill="${c.accentSoft}" />
+    <circle cx="34" cy="34" r="5.5" fill="${c.accent}" />
+    ${titleLines
+      .map(
+        (line, i) =>
+          `<text x="56" y="${40 + i * 26}" fill="${c.title}" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">${escapeXml(line)}</text>`
+      )
+      .join('\n    ')}
+    <rect x="28" y="70" rx="999" ry="999" width="${chipWidth}" height="28" fill="${c.chipBg}" stroke="${c.border}" />
+    <text x="${28 + chipWidth / 2}" y="89" text-anchor="middle" fill="${c.accent}" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">${escapeXml(lang)}</text>
+    ${descLines
+      .map(
+        (line, i) =>
+          `<text x="28" y="${126 + i * 28}" fill="${c.text}" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500">${escapeXml(line)}</text>`
+      )
+      .join('\n    ')}
+    <line x1="28" y1="176" x2="${cardWidth - 28}" y2="176" stroke="${c.border}" />
+    <text x="28" y="200" fill="${c.muted}" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Recently updated</text>
+    <text x="${cardWidth - 28}" y="200" text-anchor="end" fill="${c.muted}" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">${updated}</text>
+  </g>`;
+              }).join('\n');
+
+              return `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="${width}" height="${height}" rx="28" fill="${c.canvas}" />
+  <defs>
+    <linearGradient id="beam-${theme}" x1="0" y1="0" x2="${width}" y2="${height}" gradientUnits="userSpaceOnUse">
+      <stop stop-color="${c.accent}" stop-opacity="0.18" />
+      <stop offset="1" stop-color="${c.accent}" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect x="18" y="18" width="${width - 36}" height="${height - 36}" rx="24" fill="url(#beam-${theme})" />
+${cards}
+</svg>`;
+            };
+
+            fs.mkdirSync('assets', { recursive: true });
+            fs.writeFileSync('assets/recent-projects-dark.svg', renderSvg('dark'));
+            fs.writeFileSync('assets/recent-projects-light.svg', renderSvg('light'));
+
+            const links = recent
+              .map((item) => `<a href="${item.html_url}"><strong>${item.name}</strong></a>`)
+              .join('\n  &nbsp;•&nbsp;\n  ');
+
+            const block = [
+              '<p align="center">',
+              '  <picture>',
+              '    <source srcset="./assets/recent-projects-dark.svg" media="(prefers-color-scheme: dark)" />',
+              '    <source srcset="./assets/recent-projects-light.svg" media="(prefers-color-scheme: light)" />',
+              '    <img src="./assets/recent-projects-light.svg" alt="Recent projects" />',
+              '  </picture>',
+              '</p>',
+              '',
+              '<p align="center">',
+              `  ${links}`,
+              '</p>',
+            ].join('\n');
 
             const readme = fs.readFileSync(readmePath, 'utf8');
             const pattern = new RegExp(`${start}[\\s\\S]*?${end}`, 'm');
@@ -75,7 +210,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md assets/recent-projects-dark.svg assets/recent-projects-light.svg
           git diff --cached --quiet || git commit -m "Update recent projects"
 
       - name: Push changes
