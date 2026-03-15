@@ -54,21 +54,31 @@ My work sits at the intersection of AI product development, agentic tooling, and
 ## GitHub Pulse
 
 <p align="center">
-  <a href="https://github.com/JNHFlow21">
-    <img height="170" src="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&include_all_commits=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA&ring_color=F472B6#gh-dark-mode-only" />
-  </a>
-  <a href="https://github.com/JNHFlow21">
-    <img height="170" src="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&include_all_commits=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB&ring_color=DB2777#gh-light-mode-only" />
-  </a>
+  <picture>
+    <source
+      srcset="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&include_all_commits=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&include_all_commits=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB"
+      media="(prefers-color-scheme: light)"
+    />
+    <img height="170" src="https://github-readme-stats.vercel.app/api?username=JNHFlow21&show_icons=true&include_all_commits=true&rank_icon=percentile&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
+  </picture>
 </p>
 
 <p align="center">
-  <a href="https://github.com/JNHFlow21">
-    <img height="170" src="https://streak-stats.demolab.com?user=JNHFlow21&hide_border=true&background=00000000&stroke=1F2937&ring=60A5FA&fire=F472B6&currStreakLabel=E5E7EB&sideLabels=94A3B8&dates=64748B&sideNums=E5E7EB&currStreakNum=F8FAFC#gh-dark-mode-only" />
-  </a>
-  <a href="https://github.com/JNHFlow21">
-    <img height="170" src="https://streak-stats.demolab.com?user=JNHFlow21&hide_border=true&background=00000000&stroke=CBD5E1&ring=2563EB&fire=DB2777&currStreakLabel=0F172A&sideLabels=334155&dates=64748B&sideNums=0F172A&currStreakNum=0F172A#gh-light-mode-only" />
-  </a>
+  <picture>
+    <source
+      srcset="https://streak-stats.demolab.com?user=JNHFlow21&hide_border=true&background=00000000&stroke=1F2937&ring=60A5FA&fire=F472B6&currStreakLabel=E5E7EB&sideLabels=94A3B8&dates=64748B&sideNums=E5E7EB&currStreakNum=F8FAFC"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://streak-stats.demolab.com?user=JNHFlow21&hide_border=true&background=00000000&stroke=CBD5E1&ring=2563EB&fire=DB2777&currStreakLabel=0F172A&sideLabels=334155&dates=64748B&sideNums=0F172A&currStreakNum=0F172A"
+      media="(prefers-color-scheme: light)"
+    />
+    <img height="170" src="https://streak-stats.demolab.com?user=JNHFlow21&hide_border=true&background=00000000&stroke=CBD5E1&ring=2563EB&fire=DB2777&currStreakLabel=0F172A&sideLabels=334155&dates=64748B&sideNums=0F172A&currStreakNum=0F172A" />
+  </picture>
 </p>
 
 ---
