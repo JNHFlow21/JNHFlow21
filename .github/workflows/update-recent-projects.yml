@@ -33,14 +33,72 @@ jobs:
             const recent = repos
               .filter((item) => !item.fork && item.name !== repo)
               .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
-              .slice(0, 4);
+              .slice(0, 2);
 
-            const lines = recent.map((item) => {
-              const description = item.description?.trim() || 'No description yet.';
-              return `- [${item.name}](${item.html_url})  \n  ${description}`;
+            const escapeHtml = (value) =>
+              (value || '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+
+            const tagsFor = (item) => {
+              const text = `${item.name} ${item.description || ''}`.toLowerCase();
+              const tags = [];
+
+              if (text.includes('ai') || text.includes('agent') || text.includes('copilot')) {
+                tags.push(['AI Product', '0F172A']);
+              }
+
+              if (
+                text.includes('tool') ||
+                text.includes('framework') ||
+                text.includes('dashboard') ||
+                text.includes('skill')
+              ) {
+                tags.push(['Tooling', '1D4ED8']);
+              }
+
+              if (
+                text.includes('automation') ||
+                text.includes('workflow') ||
+                text.includes('bot')
+              ) {
+                tags.push(['Automation', '334155']);
+              }
+
+              if (tags.length === 0) {
+                tags.push(['Builder', '475569']);
+              }
+
+              return tags.slice(0, 2);
+            };
+
+            const cells = recent.map((item) => {
+              const description = escapeHtml(item.description?.trim() || 'No description yet.');
+              const badges = tagsFor(item)
+                .map(
+                  ([label, color]) =>
+                    `<img src="https://img.shields.io/badge/${encodeURIComponent(label.replace(/ /g, '_'))}-${color}?style=flat-square" />`
+                )
+                .join('\n      ');
+
+              return `    <td width="50%" valign="top">
+      <strong><a href="${item.html_url}">${escapeHtml(item.name)}</a></strong><br/>
+      ${badges}<br/>
+      ${description}
+    </td>`;
             });
 
-            const block = lines.join('\n');
+            while (cells.length < 2) {
+              cells.push('    <td width="50%" valign="top"></td>');
+            }
+
+            const block = `<table>
+  <tr>
+${cells.join('\n')}
+  </tr>
+</table>`;
             const start = '<!-- recent-projects:start -->';
             const end = '<!-- recent-projects:end -->';
 

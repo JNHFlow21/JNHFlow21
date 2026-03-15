@@ -54,14 +54,22 @@ My work sits at the intersection of AI product development, agentic tooling, and
 ## Recent Projects
 
 <!-- recent-projects:start -->
-- [harness-first-agentic-development](https://github.com/JNHFlow21/harness-first-agentic-development)  
-  AI-first framework and template repo for agentic engineering, AI coding workflows, and human-in-the-loop product development.
-- [offerpilot-ai](https://github.com/JNHFlow21/offerpilot-ai)  
-  AI interview preparation copilot for AI and product role seekers.
-- [openclaw-live-panel](https://github.com/JNHFlow21/openclaw-live-panel)  
-  Realtime terminal dashboard for OpenClaw multi-agent monitoring (RUNNING/IDLE/STUCK/RATE_LIMIT) with queue diagnostics and token visibility.
-- [ocl-social-fetcher](https://github.com/JNHFlow21/ocl-social-fetcher)  
-  OpenClaw Skill: Social media fetcher for Twitter/X, Xiaohongshu, Douyin
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <strong><a href="https://github.com/JNHFlow21/harness-first-agentic-development">harness-first-agentic-development</a></strong><br/>
+      <img src="https://img.shields.io/badge/AI_Product-0F172A?style=flat-square" />
+      <img src="https://img.shields.io/badge/Tooling-1D4ED8?style=flat-square" /><br/>
+      AI-first framework and template repo for agentic engineering, AI coding workflows, and human-in-the-loop product development.
+    </td>
+    <td width="50%" valign="top">
+      <strong><a href="https://github.com/JNHFlow21/offerpilot-ai">offerpilot-ai</a></strong><br/>
+      <img src="https://img.shields.io/badge/AI_Product-0F172A?style=flat-square" />
+      <img src="https://img.shields.io/badge/Automation-334155?style=flat-square" /><br/>
+      AI interview preparation copilot for AI and product role seekers.
+    </td>
+  </tr>
+</table>
 <!-- recent-projects:end -->
 
 ---
