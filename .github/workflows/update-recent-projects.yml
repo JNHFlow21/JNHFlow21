@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "18 2 * * *"
 
+concurrency:
+  group: update-recent-projects
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -13,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Update recent projects section
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
@@ -79,4 +83,6 @@ jobs:
           git diff --cached --quiet || git commit -m "Update recent projects"
 
       - name: Push changes
-        run: git push
+        run: |
+          git pull --rebase origin main
+          git push
