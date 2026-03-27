@@ -57,21 +57,21 @@ My work sits at the intersection of AI product development, agentic tooling, and
 <table>
   <tr>
     <td width="48%" valign="top" align="center">
-      <a href="https://github.com/JNHFlow21/agentic-workflow">
+      <a href="https://github.com/JNHFlow21/social-post-extractor-mcp">
         <picture>
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=agentic-workflow&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=agentic-workflow&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" media="(prefers-color-scheme: light)" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=agentic-workflow&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
+          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=social-post-extractor-mcp&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />
+          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=social-post-extractor-mcp&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" media="(prefers-color-scheme: light)" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=social-post-extractor-mcp&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
         </picture>
       </a>
     </td>
     <td width="4%"></td>
     <td width="48%" valign="top" align="center">
-      <a href="https://github.com/JNHFlow21/lite-agent">
+      <a href="https://github.com/JNHFlow21/agentic-workflow">
         <picture>
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=lite-agent&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />
-          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=lite-agent&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" media="(prefers-color-scheme: light)" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=lite-agent&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
+          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=agentic-workflow&hide_border=true&bg_color=00000000&title_color=E5E7EB&text_color=CBD5E1&icon_color=60A5FA" media="(prefers-color-scheme: dark)" />
+          <source srcset="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=agentic-workflow&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" media="(prefers-color-scheme: light)" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=JNHFlow21&repo=agentic-workflow&hide_border=true&bg_color=00000000&title_color=0F172A&text_color=334155&icon_color=2563EB" />
         </picture>
       </a>
     </td>
